@@ -2,7 +2,7 @@
 
 E-Commerce Site showcase for SEG3125 | KhaiKeys - Mechanical Keyboard Shop
 
-Access the site here: TBD
+Access the site here: https://khaiecommerceshopseg3125.netlify.app/
 
 <!---
 <table>
