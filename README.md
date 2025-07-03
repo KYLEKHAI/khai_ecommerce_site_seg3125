@@ -1,6 +1,6 @@
 # khai_ecommerce_site_seg3125
 
-E-Commerce Site showcase for SEG3125 | TBD
+E-Commerce Site showcase for SEG3125 | KhaiKeys - Mechanical Keyboard Shop
 
 Access the site here: TBD
 

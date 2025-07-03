@@ -1,0 +1,211 @@
+.search-filters-container {
+  width: 100%;
+  padding: 3rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  background: transparent;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+}
+
+.search-bar {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 3rem 1rem 1.5rem;
+  font-size: 1.1rem;
+  border: 2px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: border-color 0.3s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-input:focus,
+.search-input:focus-visible {
+  border-color: #646cff;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+.search-button {
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+  outline: none;
+}
+
+.search-button:hover {
+  color: #646cff;
+}
+
+.search-button:focus,
+.search-button:focus-visible {
+  outline: none;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: inherit;
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.filter-select {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 2px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font-family: system-ui, -apple-system, sans-serif;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.filter-select:focus,
+.filter-select:focus-visible {
+  border-color: #646cff;
+  outline: none;
+}
+
+.filter-select:hover {
+  border-color: #888;
+}
+
+.filter-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.clear-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.clear-filters-btn {
+  background: #000000;
+  border: 2px solid #000000;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  height: 100%;
+  min-height: 54px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .clear-filters-btn {
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    color: #000000;
+  }
+}
+
+.clear-filters-btn:hover {
+  border-color: #ff4444;
+}
+
+.clear-filters-btn:focus,
+.clear-filters-btn:focus-visible {
+  outline: none;
+}
+
+.results-count {
+  font-size: 0.95rem;
+  color: #666;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .search-filters-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .search-bar {
+    margin-bottom: 2rem;
+  }
+
+  .search-input {
+    padding: 0.9rem 2.8rem 0.9rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .filters-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .filter-select {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .filter-actions {
+    text-align: center;
+  }
+
+  .clear-filters-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-filters-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .filters-grid {
+    gap: 1rem;
+  }
+
+  .filter-label {
+    font-size: 0.85rem;
+  }
+
+  .filter-select {
+    padding: 0.6rem 0.7rem;
+    font-size: 0.9rem;
+  }
+}

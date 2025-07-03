@@ -1,0 +1,211 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid #c4c4c4;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  background: var(--bg-color, #ffffff);
+  z-index: 100;
+  opacity: 0.95;
+  backdrop-filter: blur(25px);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.logo-container:hover {
+  opacity: 0.7;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin: 0;
+  color: inherit;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-tagline {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: inherit;
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-style: italic;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid currentColor;
+  white-space: nowrap;
+  width: 0;
+  animation: typewriter 2s steps(18, end) forwards, blink-cursor 0.8s infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-cursor {
+  0%,
+  50% {
+    border-color: currentColor;
+  }
+  51%,
+  100% {
+    border-color: transparent;
+  }
+}
+
+.navbar-logo-img {
+  height: 2rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2.2rem;
+}
+
+.navbar-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-link:hover,
+.help-button:hover,
+.about-button:hover,
+.products-button:hover {
+  color: #646cff;
+}
+
+.help-button,
+.about-button,
+.products-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  outline: none;
+}
+
+.help-button:focus,
+.help-button:focus-visible,
+.about-button:focus,
+.about-button:focus-visible,
+.products-button:focus,
+.products-button:focus-visible {
+  outline: none;
+}
+
+.cart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.cart-icon-container {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #646cff;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  border: 2px solid white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .logo-container {
+    gap: 0.5rem;
+  }
+
+  .navbar-logo {
+    font-size: 1.2rem;
+  }
+
+  .navbar-tagline {
+    font-size: 0.9rem;
+  }
+
+  .typewriter {
+    animation: typewriter 2.5s steps(18, end) forwards,
+      blink-cursor 0.8s infinite;
+  }
+
+  .navbar-logo-img {
+    height: 1.5rem;
+  }
+
+  .navbar-right {
+    gap: 1.8rem;
+  }
+
+  .navbar-link,
+  .help-button,
+  .about-button,
+  .products-button {
+    font-size: 0.8rem;
+  }
+}
