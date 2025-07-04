@@ -70,7 +70,10 @@
 }
 
 .browse-screen,
-.about-screen {
+.about-screen,
+.learn-screen,
+.cart-screen,
+.checkout-screen {
   width: 100%;
   min-height: 100vh;
   display: flex;

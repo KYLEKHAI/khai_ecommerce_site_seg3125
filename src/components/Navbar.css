@@ -103,20 +103,22 @@
   text-decoration: none;
   font-weight: 400;
   letter-spacing: 0.05em;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: opacity 0.3s ease;
 }
 
 .navbar-link:hover,
 .help-button:hover,
 .about-button:hover,
-.products-button:hover {
+.products-button:hover,
+.learn-button:hover {
   color: #646cff;
 }
 
 .help-button,
 .about-button,
-.products-button {
+.products-button,
+.learn-button {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -125,7 +127,7 @@
   text-decoration: none;
   font-weight: 400;
   letter-spacing: 0.05em;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: color 0.3s ease;
   outline: none;
 }
@@ -135,7 +137,9 @@
 .about-button:focus,
 .about-button:focus-visible,
 .products-button:focus,
-.products-button:focus-visible {
+.products-button:focus-visible,
+.learn-button:focus,
+.learn-button:focus-visible {
   outline: none;
 }
 
@@ -171,7 +175,6 @@
   border: 2px solid white;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem 1.5rem;
@@ -205,7 +208,8 @@
   .navbar-link,
   .help-button,
   .about-button,
-  .products-button {
-    font-size: 0.8rem;
+  .products-button,
+  .learn-button {
+    font-size: 0.9rem;
   }
 }

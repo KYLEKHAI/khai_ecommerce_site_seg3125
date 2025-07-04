@@ -1,0 +1,299 @@
+.review-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.review-modal {
+  background: white;
+  border: 2px solid black;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: scaleIn 0.3s ease-out;
+  transform-origin: center;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.review-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: 2px solid black;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  color: black;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.review-close-btn:hover {
+  background: red;
+  color: white;
+  border-color: red;
+  transform: scale(1.05);
+}
+
+.review-close-btn:focus {
+  outline: none;
+}
+
+.review-content {
+  padding: 3rem;
+}
+
+.review-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid black;
+  padding-bottom: 1.5rem;
+}
+
+.review-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: black;
+}
+
+.review-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.review-section {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.review-section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: black;
+}
+
+.rating-group {
+  margin-bottom: 1.5rem;
+}
+
+.rating-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.star {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ddd;
+  transition: all 0.2s ease;
+  padding: 0;
+  line-height: 1;
+}
+
+.star:hover,
+.star.filled {
+  color: #8b5cf6;
+  transform: scale(1.1);
+}
+
+.star:focus {
+  outline: none;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.review-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.review-textarea:focus {
+  outline: none;
+  border-color: #8b5cf6;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.radio-label:hover {
+  background: #f8f9fa;
+  border-color: #8b5cf6;
+}
+
+.radio-label input[type="radio"] {
+  margin-right: 0.75rem;
+  accent-color: #8b5cf6;
+  transform: scale(1.2);
+}
+
+.radio-text {
+  font-weight: 500;
+  color: black;
+}
+
+.review-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid black;
+}
+
+.skip-btn {
+  background: white;
+  border: 2px solid black;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.skip-btn:hover {
+  background: black;
+  color: white;
+}
+
+.skip-btn:focus {
+  outline: none;
+}
+
+.submit-btn {
+  background: #8b5cf6;
+  border: 2px solid #8b5cf6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.submit-btn:hover {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  transform: translateY(-2px);
+}
+
+.submit-btn:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .review-modal {
+    width: 95%;
+    margin: 1rem;
+  }
+
+  .review-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .review-title {
+    font-size: 1.5rem;
+  }
+
+  .star {
+    font-size: 1.3rem;
+  }
+
+  .review-actions {
+    flex-direction: column;
+  }
+
+  .skip-btn,
+  .submit-btn {
+    width: 100%;
+  }
+}

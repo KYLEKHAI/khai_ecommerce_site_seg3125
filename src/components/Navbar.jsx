@@ -37,6 +37,13 @@ function Navbar({ onNavigate, cartItemsCount = 0 }) {
           About
         </button>
         <button
+          className="navbar-link learn-button"
+          onClick={() => onNavigate("learn")}
+          aria-label="Learn"
+        >
+          Learn
+        </button>
+        <button
           className="navbar-link help-button"
           onClick={() => onNavigate("toggleHelp")}
           aria-label="Help"

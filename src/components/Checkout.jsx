@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Checkout.css";
+import Review from "./Review";
 
 function Checkout({
   checkoutItems,
@@ -9,6 +10,7 @@ function Checkout({
   onOrderPlaced,
 }) {
   const [currentStep, setCurrentStep] = useState(1);
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -80,6 +82,14 @@ function Checkout({
     if (onBackToBrowse) {
       onBackToBrowse();
     }
+  };
+
+  const handleOpenReview = () => {
+    setIsReviewModalOpen(true);
+  };
+
+  const handleCloseReview = () => {
+    setIsReviewModalOpen(false);
   };
 
   const stepTitles = [
@@ -487,6 +497,9 @@ function Checkout({
                 </div>
 
                 <div className="confirmation-actions">
+                  <button className="review-btn" onClick={handleOpenReview}>
+                    Leave a Review
+                  </button>
                   <button
                     className="browse-more-btn"
                     onClick={handleBackToBrowse}
@@ -527,6 +540,8 @@ function Checkout({
           )}
         </div>
       </div>
+
+      <Review isOpen={isReviewModalOpen} onClose={handleCloseReview} />
     </div>
   );
 }

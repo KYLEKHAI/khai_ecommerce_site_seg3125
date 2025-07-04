@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Browse from "./components/Browse";
 import About from "./components/About";
+import Learn from "./components/Learn";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import HelpPanel from "./components/HelpPanel";
@@ -145,6 +146,13 @@ function App() {
         <div className="about-screen">
           <Navbar onNavigate={handleNavigate} cartItemsCount={cartItemsCount} />
           <About />
+        </div>
+      )}
+
+      {currentView === "learn" && (
+        <div className="learn-screen">
+          <Navbar onNavigate={handleNavigate} cartItemsCount={cartItemsCount} />
+          <Learn />
         </div>
       )}
 
