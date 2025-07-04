@@ -40,7 +40,7 @@ function Checkout({
     const price = item.priceNumber || parseFloat(item.price.replace("$", ""));
     return total + price * item.quantity;
   }, 0);
-  const shipping = 15.99;
+  const shipping = subtotal >= 150 ? 0 : 15.99;
   const tax = subtotal * 0.13;
   const total = subtotal + shipping + tax;
 
@@ -417,7 +417,9 @@ function Checkout({
                   </div>
                   <div className="summary-line">
                     <span>Shipping:</span>
-                    <span>${shipping.toFixed(2)}</span>
+                    <span>
+                      {shipping === 0 ? "FREE" : `$${shipping.toFixed(2)}`}
+                    </span>
                   </div>
                   <div className="summary-line">
                     <span>Tax (HST 13%):</span>

@@ -475,7 +475,7 @@ function Browse({ onBuyNow, onAddToCart }) {
                     <>
                       <span className="original-price-inline">
                         {" "}
-                        ${keyboard.originalPrice}
+                        {keyboard.originalPrice}
                       </span>
                       <span className="sale-price-inline">
                         {" "}

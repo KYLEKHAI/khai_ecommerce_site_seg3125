@@ -63,7 +63,7 @@ function Item({ isOpen, onClose, product, onBuyNow, onAddToCart }) {
                     <span className="item-savings">
                       Save $
                       {(
-                        parseFloat(product.originalPrice) -
+                        parseFloat(product.originalPrice.replace("$", "")) -
                         parseFloat(product.price.replace("$", ""))
                       ).toFixed(2)}
                       !
